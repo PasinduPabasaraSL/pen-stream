@@ -1,15 +1,19 @@
-# Task List Manager
+# PenStream
 
-A simple Laravel app to manage tasks and lists, built with Docker.
+A simple blog built with **Laravel** and **Docker**, using plain **HTML/CSS** for the frontend.
+
+## Features
+- CRUD blog posts
+- Minimal HTML/CSS frontend
+- Dockerized for easy setup
 
 ## Setup
-
 ```bash
-git clone https://github.com/YourUsername/task-list-manager.git
-cd task-list-manager
-docker compose up -d --build
-docker exec -it laravel_app php artisan key:generate
-docker exec -it laravel_app php artisan migrate
+git clone https://github.com/your-username/PenStream.git
+cd PenStream
+cp .env.example .env
+php artisan key:generate
+docker compose up -d
+docker compose exec app php artisan migrate
 ```
-
-Access the app at http://localhost:8000
+Visit the app at http://localhost:8000
